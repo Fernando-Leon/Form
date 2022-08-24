@@ -1,0 +1,102 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+:root {
+    --mainColor: #0F3D3E;
+    --secondColor: #100F0F;
+    --colorHovers: #E2DCC8;
+    --colorExt1: #E2DCC8;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    width: 50%;
+    height: 60%;
+    padding: 20px;
+    display: grid;
+    grid-gap: 2px;
+    border-radius: 10px;
+    grid-template-rows: 15% auto 15% auto 15% auto 15% 15%;
+    border: 1px solid var(--mainColor);
+}
+
+h2 {
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+#name, #mail, #pass {
+    margin-bottom: 10%;
+    outline: none;
+    border: none;
+    border: solid 1px var(--mainColor);
+    border-radius: 5px;
+    padding-left: 5px;
+    transition: .4s;
+}
+
+#name:hover, #mail:hover, #pass:hover {
+    background-color: var(--mainColor);
+    color: var(--colorExt1);
+}
+
+.center-item {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--mainColor);
+    color: var(--colorExt1);
+    transition: .4s;
+    cursor: pointer;
+}
+
+button:hover, button:focus{
+    border: solid 1px var(--mainColor);
+    background-color: transparent;
+    color: var(--secondColor);
+}
+
+
+/*Dialog regiter exited*/
+
+#dialog {
+    background-color: var(--mainColor);
+    color: var(--colorExt1);
+    font-size: 20px;
+    width: 60%;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+}
+
+/*Responsive*/
+
+@media  (max-width: 450px) {
+    form {
+        width: 50%;
+        height: 39%;
+    }
+}
